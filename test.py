@@ -104,8 +104,9 @@ def run_conversation():
 import os
 os.environ['HTTP_PROXY'] = 'http://127.0.0.1:33211'
 os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:33211'
-from dotenv import load_dotenv
 
+
+from dotenv import load_dotenv
 # 加载 .env 文件中的环境变量
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
