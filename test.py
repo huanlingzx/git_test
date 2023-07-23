@@ -104,7 +104,9 @@ def run_conversation():
 import os
 os.environ['HTTP_PROXY'] = 'http://127.0.0.1:33211'
 os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:33211'
-openai.api_key = "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"
+openai.api_key = "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"
+openai.organization = "org-z3mzvA1AqPnaOIltUWhvzAZq"
+
 
 
 # 开始计时
