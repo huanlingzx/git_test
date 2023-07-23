@@ -123,3 +123,16 @@ end_time = time.time()
 run_time = end_time - start_time
 
 print("run_conversation运行时间为：%.2f秒" % run_time)
+
+# ChatGPT的对话函数
+def chat_with_gpt(prompt, max_tokens=100):
+    try:
+        response = openai.Completion.create(
+            engine="text-davinci-002",  # 这是ChatGPT的引擎名称
+            prompt=prompt,
+            max_tokens=max_tokens
+        )
+        return response['choices'][0]['text'].strip()
+    except Exception as e:
+        return str(e)
+        
