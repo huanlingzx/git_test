@@ -9,7 +9,7 @@ def get_current_weather(location, unit="fahrenheit"):
     """Get the current weather in a given location"""
     weather_info = {
         "location": location,
-        "temperature": "72",
+        "temperature": "36",
         "unit": unit,
         "forecast": ["sunny", "windy"],
     }
