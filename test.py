@@ -104,10 +104,12 @@ def run_conversation():
 import os
 os.environ['HTTP_PROXY'] = 'http://127.0.0.1:33211'
 os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:33211'
-openai.api_key = "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"
-openai.organization = "org-z3mzvA1AqPnaOIltUWhvzAZq"
 
 
+from dotenv import load_dotenv
+# 加载 .env 文件中的环境变量
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # 开始计时
 start_time = time.time()
